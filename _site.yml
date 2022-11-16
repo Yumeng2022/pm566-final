@@ -1,1 +1,10 @@
-
+name: "my-website"
+output_dir: "."
+navbar:
+  title: "Lab 12"
+  left:
+    - text: "Home"
+      href: index.html
+output:
+  html_document:
+    theme: cosmo
