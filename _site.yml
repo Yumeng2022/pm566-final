@@ -1,10 +1,12 @@
 name: "my-website"
 output_dir: "."
 navbar:
-  title: "Lab 12"
+  title: "PM566 Final Project"
   left:
     - text: "Home"
       href: index.html
+    - text: "About"
+      href: about.html
   right:
     - icon: fa-github fa-lg
       href: https://github.com/USCbiostats/PM566

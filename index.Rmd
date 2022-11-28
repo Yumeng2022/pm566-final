@@ -2,12 +2,12 @@
 title: "PM566 Final Project"
 author: "Yumeng Gao"
 output: 
-    html_document:
-        toc: TRUE
-        toc_float: TRUE
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
 ---
 
-This is my PM566 Final Project website.
+This is my PM566 Final Project Website.
 
 <br>
 
