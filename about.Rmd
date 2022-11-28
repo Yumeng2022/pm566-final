@@ -12,12 +12,12 @@ output:
 
 <br>
 
-The original dataset of this study was exported from CDC's website: 
+**The original dataset was exported from CDC's website:** 
 AH Monthly Provisional Counts of Deaths for Select Causes of Death by Sex, Age, and Race and Hispanic Origin (<https://data.cdc.gov/NCHS/AH-Monthly-Provisional-Counts-of-Deaths-for-Select/65mz-jvh5>)
 
 <br>
 
-My GitHub page: <https://github.com/Yumeng2022>
+**My GitHub page:** <https://github.com/Yumeng2022>
 
 <br>
 

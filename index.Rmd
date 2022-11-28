@@ -1,11 +1,13 @@
 ---
-title: "PM566 Final Project"
+title: "Analysis of Current Death Counts and Leading Causes in the US, focusing on COVID-19"
 author: "Yumeng Gao"
 output: 
   html_document:
     toc: TRUE
     toc_float: TRUE
 ---
+
+<br>
 
 This is my PM566 Final Project Website.
 
