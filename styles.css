@@ -1,0 +1,12 @@
+h1 {
+  font-color: blue
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 2;
+}
+
+.section {
+   padding-bottom: 2em;
+}

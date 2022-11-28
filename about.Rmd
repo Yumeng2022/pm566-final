@@ -1,12 +1,24 @@
 ---
 title: "About This Website"
-author: "Yumeng Gao"
 output: 
     html_document:
         toc: TRUE
         toc_float: TRUE
 ---
 
+<br>
+
+### This Website is about .
+
+<br>
+
+The original dataset of this study was exported from CDC's website: 
+AH Monthly Provisional Counts of Deaths for Select Causes of Death by Sex, Age, and Race and Hispanic Origin (<https://data.cdc.gov/NCHS/AH-Monthly-Provisional-Counts-of-Deaths-for-Select/65mz-jvh5>)
+
+<br>
+
+My GitHub page: <https://github.com/Yumeng2022>
+
+<br>
 
 
-This Website is about .
