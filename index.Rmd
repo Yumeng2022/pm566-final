@@ -190,8 +190,7 @@ summary(ah[,11:25])
 tab1= as.tibble(group_by(ah, Year) %>% 
                        summarize( AllCause= mean(AllCause), NaturalCause= mean(NaturalCause), Septicemia= mean(Septicemia), Tumor= mean(Tumor), Diabetes= mean(Diabetes), Alzheimer= mean(Alzheimer),FluPneumonia= mean(FluPneumonia), Lower_R= mean(Lower_R), Other_R= mean(Other_R) ,Nephrosis= mean(Nephrosis), Abnormal= mean(Abnormal), Heart= mean(Heart), Cerebrovascular= mean(Cerebrovascular), Covid_Multi= mean(Covid_Multi) , Covid_Under= mean(Covid_Under)))
 
-c1= tab1 %>% pivot_longer(cols = c(AllCause, NaturalCause, Septicemia, Tumor, Diabetes, Alzheimer, FluPneumonia, Lower_R, Other_R, Nephrosis, Abnormal, Heart, Cerebrovascular, Covid_Multi, Covid_Under),
-                           names_to = "Cause")
+c1= tab1 %>% pivot_longer(cols = c(AllCause, NaturalCause, Septicemia, Tumor, Diabetes, Alzheimer, FluPneumonia, Lower_R, Other_R, Nephrosis, Abnormal, Heart, Cerebrovascular, Covid_Multi, Covid_Under), names_to = "Cause")
 ```
 
 ```{r echo=FALSE}
@@ -221,8 +220,7 @@ ah[, Month_total := fifelse(Y== 2019, M,
 tab2= as.tibble(group_by(ah, Month_total) %>% 
                        summarize( AllCause= mean(AllCause), NaturalCause= mean(NaturalCause), Septicemia= mean(Septicemia), Tumor= mean(Tumor), Diabetes= mean(Diabetes), Alzheimer= mean(Alzheimer),FluPneumonia= mean(FluPneumonia), Lower_R= mean(Lower_R), Other_R= mean(Other_R) ,Nephrosis= mean(Nephrosis), Abnormal= mean(Abnormal), Heart= mean(Heart), Cerebrovascular= mean(Cerebrovascular), Covid_Multi= mean(Covid_Multi) , Covid_Under= mean(Covid_Under)))
 
-c2= tab2 %>% pivot_longer(cols = c(AllCause, NaturalCause, Septicemia, Tumor, Diabetes, Alzheimer, FluPneumonia, Lower_R, Other_R, Nephrosis, Abnormal, Heart, Cerebrovascular, Covid_Multi, Covid_Under),
-                           names_to = "Cause")
+c2= tab2 %>% pivot_longer(cols = c(AllCause, NaturalCause, Septicemia, Tumor, Diabetes, Alzheimer, FluPneumonia, Lower_R, Other_R, Nephrosis, Abnormal, Heart, Cerebrovascular, Covid_Multi, Covid_Under), names_to = "Cause")
 ```
 
 
@@ -304,10 +302,9 @@ ggplotly(f2_2)
 
 ## {-}
 
+Narrowing down to COVID-19 causes, before Month 14 (Feb 2020), there was no COVID-19-attributed mortality in the US. Then for both causes, death counts started to increase from Feb 2020, the highest peak was at Month 25 (Jan 2021).
 
-Narrowing down to COVID-19 causes, Figure 3 clearly showed that before month 14 (Feb 2020), there was no COVID-19-attributed mortality in the US. Then for both causes, death counts started to increase from Feb 2020, the highest peak was at month 25 (Jan 2021).
-
-Since there was no COVID-caused death in 2019, following interpretation would be focused on data of 2020 and 2021.
+*Since there was no COVID-caused death in 2019, following interpretation would be focused on data of 2020 and 2021.
 
 <br>
 
@@ -319,7 +316,7 @@ s= as.tibble(group_by(ah, Year, Sex) %>%
 c_s= s %>% pivot_longer(cols = c(AllCause, Covid_Multi, Covid_Under),
                            names_to = "Cause")
 ```
-counts of death for COVID-19, coded to ICD-10 code U07.1 as an underlying or multiple cause of death.
+
 ```{r echo=FALSE}
 f3_1= subset(c_s, Cause %in% "Covid_Multi") %>%
   ggplot(mapping= aes(x = Year, 
@@ -327,7 +324,7 @@ f3_1= subset(c_s, Cause %in% "Covid_Multi") %>%
                      fill = Sex)) +
   geom_bar(stat='identity', position = "dodge", width= 0.5) +
   ylab("Average Death Counts") +
-  ggtitle("Average Counts of Death for COVID-19 by Sex, as Multiple Cause") +
+  ggtitle("Average Counts of Death for COVID-19 by Sex, as a Multiple Cause") +
   scale_color_grey() +
   scale_fill_grey() +
   theme_linedraw() +
@@ -339,7 +336,7 @@ f3_2= subset(c_s, Cause %in% "Covid_Under") %>%
                      fill = Sex)) +
   geom_bar(stat='identity', position = "dodge", width= 0.5) +
   ylab("Average Death Counts") +
-  ggtitle("Average Counts of Death for COVID-19 by Sex, as Underlying Cause") +
+  ggtitle("Average Counts of Death for COVID-19 by Sex, as an Underlying Cause") +
   scale_color_grey() +
   scale_fill_grey() +
   theme_linedraw() +
@@ -383,7 +380,7 @@ f4_1= subset(c_a, Cause %in% "Covid_Multi") %>%
                      fill = AgeGroup)) +
   geom_bar(stat='identity', position = "dodge", width= 0.7) +
   ylab("Average Death Counts") +
-  ggtitle("Average Counts of Death for COVID-19 by Age, as Multiple Cause") +
+  ggtitle("Average Counts of Death for COVID-19 by Age, as a Multiple Cause") +
   scale_color_brewer(palette="PuOr") +
   scale_fill_brewer(palette="PuOr") +
   theme_linedraw()
@@ -394,7 +391,7 @@ f4_2= subset(c_a, Cause %in% "Covid_Under") %>%
                      fill = AgeGroup)) +
   geom_bar(stat='identity', position = "dodge", width= 0.7) +
   ylab("Average Death Counts") +
-  ggtitle("Average Counts of Death for COVID-19 by Age, as Underlying Cause") +
+  ggtitle("Average Counts of Death for COVID-19 by Age, as an Underlying Cause") +
   scale_color_brewer(palette="PuOr") +
   scale_fill_brewer(palette="PuOr") +
   theme_linedraw()
@@ -436,7 +433,7 @@ f5_1= subset(c_r, Cause %in% "Covid_Multi") %>%
                      fill = Race)) +
   geom_bar(stat='identity', position = "dodge", width= 0.5) +
   ylab("Average Death Counts") +
-  ggtitle("Average Counts of Death for COVID-19 by Race, as Multiple Cause") +
+  ggtitle("Average Counts of Death for COVID-19 by Race, as a Multiple Cause") +
   scale_color_brewer(palette="Set2") +
   scale_fill_brewer(palette="Set2") +
   theme_linedraw()
@@ -447,7 +444,7 @@ f5_2= subset(c_r, Cause %in% "Covid_Under") %>%
                      fill = Race)) +
   geom_bar(stat='identity', position = "dodge", width= 0.5) +
   ylab("Average Death Counts") +
-  ggtitle("Average Counts of Death for COVID-19 by Race, as Underlying Cause") +
+  ggtitle("Average Counts of Death for COVID-19 by Race, as an Underlying Cause") +
   scale_color_brewer(palette="Set2") +
   scale_fill_brewer(palette="Set2") +
   theme_linedraw()
@@ -469,14 +466,14 @@ ggplotly(f5_2)
 
 ## {-}
 
-We can find the same pattern in 2020 and 2021. White people got the highest average death counts, while Indian/ Alaska Native had smallest mortality. From small to large average death counts, the order is: Other, Indian/Alaska Native, Asian, Black, Hispanic, White.
+We can find the same pattern in 2020 and 2021. White people got the highest average death counts, while Indian/ Alaska Native had smallest mortality (excluding Other group). From small to large average death counts, the order is: Other, Indian/Alaska Native, Asian, Black, Hispanic, White.
 
 
 <br>
 
 ## **Summary**
 
-This research of mortality comparison among different causes first showed that except for two COVID-19 causes, all other leading causes of death had stable trends from 2019 to 2021. The top 3 leading causes are natural cause, heart disease, and tumor. The COVID-caused mortality started at Feb 2020 and reached it peak at Jan 2021.For different sex, age, and race groups, there were obvious difference of average COVID-caused death counts. Females tended to had smaller average death counts than males, elder people tended to had higher average mortality than young people. White people got the highest average death counts, while Indian/ Alaska Native and Other had smallest mortality.
+This research of mortality comparison among different causes first showed that except for two COVID-19 causes, all other leading causes of death had stable trends from 2019 to 2021. The top 3 leading causes were natural cause, heart disease, and tumor. The COVID-caused mortality started at Feb 2020 and reached it peak at Jan 2021.For different sex, age, and race groups, there were obvious difference of average COVID-caused death counts. Females tended to had smaller average death counts than males, elder people tended to had higher average mortality than young people. White people got the highest average death counts, while Indian/ Alaska Native had smallest mortality.
 
 <br>
 
