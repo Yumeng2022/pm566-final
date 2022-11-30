@@ -362,7 +362,7 @@ ggplotly(f3_2)
 
 ## {-}
 
-Based on Table 2 and Figure 4, females had smaller COVID-caused average death counts than males in 2020 and 2021, indicating that men might have higher risk of dying from COVID-19 than women. 
+Females had smaller COVID-caused average death counts than males in 2020 and 2021, indicating that men might have higher risk of dying from COVID-19 than women. 
 
 <br>
 
