@@ -26,7 +26,9 @@ The primary research questions:
 
 The original dataset of this study was exported from AH Monthly Provisional Counts of Deaths for Select Causes of Death by Sex, Age, and Race and Hispanic Origin (https://data.cdc.gov/NCHS/AH-Monthly-Provisional-Counts-of-Deaths-for-Select/65mz-jvh5). 
 
-There were in 3960 observations for death counts, including 14 major causes of death from Jan 2019 to Sep 2021 (33 months in total). After data cleaning, we got 1980 males and 1980 females (1:1) and ten Age categories from “0-4 years” to “85 years and over”. Race were divided into Hispanic, American Indian or Alaska Native, Asian, Black, White, and other. Notably, Year, Total Month, Sex, Age, and Race all have same sample size for each category, so the death counts among groups could also be considered as the proportions, eligible to be compared directly.
+There were in 3960 observations for death counts, including 14 major causes of death from Jan 2019 to Sep 2021 (33 months in total). After data cleaning, we got 1980 males and 1980 females (1:1) and ten Age categories from “0-4 years” to “85 years and over”. Race were divided into Hispanic, American Indian or Alaska Native, Asian, Black, White, and other. 
+
+Notably, Year, Total Month, Sex, Age, and Race all have same sample size for each category, so the death counts among groups could also be considered as the proportions, eligible to be compared directly.
 
 The key variables (leading causes) were: 
 
@@ -302,9 +304,9 @@ ggplotly(f2_2)
 
 ## {-}
 
-Narrowing down to COVID-19 causes, before Month 14 (Feb 2020), there was no COVID-19-attributed mortality in the US. Then for both causes, death counts started to increase from Feb 2020, the highest peak was at Month 25 (Jan 2021).
+Narrowing down to COVID-19 causes, before Month 14 (Feb 2020), there was no COVID-19-attributed mortality in the US. Then for both causes, average death counts started to increase from Feb 2020, the highest peak was at Month 25 (Jan 2021).
 
-*Since there was no COVID-caused death in 2019, following interpretation would be focused on data of 2020 and 2021.
+* Since there was no COVID-caused death data in 2019, following interpretation would be focused on data of 2020 and 2021.
 
 <br>
 
@@ -360,7 +362,7 @@ ggplotly(f3_2)
 
 ## {-}
 
-Based on Table 2 and Figure 4, females have smaller COVID-caused average death counts than males in 2020 and 2021. The all_cause factor had the same results, indicating the higher risk of dying from COVID-19 of men than women. 
+Based on Table 2 and Figure 4, females had smaller COVID-caused average death counts than males in 2020 and 2021, indicating that men might have higher risk of dying from COVID-19 than women. 
 
 <br>
 
@@ -413,7 +415,7 @@ ggplotly(f4_2)
 
 ## {-}
 
-The overall pattern was: COVID-caused average death counts increased with age. In 2021, the equals to or older than 85 years old group got smaller counts than 75-84 years old group. This required future analysis.
+The overall pattern was: COVID-caused average death counts increased with age. In 2021, the equals to or older than 85 years old group got smaller counts than 75-84 years old group, which required future analysis.
 
 <br>
 
@@ -473,7 +475,7 @@ We can find the same pattern in 2020 and 2021. White people got the highest aver
 
 ## **Summary**
 
-This research of mortality comparison among different causes first showed that except for two COVID-19 causes, all other leading causes of death had stable trends from 2019 to 2021. The top 3 leading causes were natural cause, heart disease, and tumor. The COVID-caused mortality started at Feb 2020 and reached it peak at Jan 2021.For different sex, age, and race groups, there were obvious difference of average COVID-caused death counts. Females tended to had smaller average death counts than males, elder people tended to had higher average mortality than young people. White people got the highest average death counts, while Indian/ Alaska Native had smallest mortality.
+This research of mortality comparison by different causes first showed that except for two COVID-19 causes, all other leading causes of death had stable trends from 2019 to 2021. The top 3 leading causes were natural cause, heart disease, and tumor. The COVID-caused mortality started at Feb 2020 and reached it peak at Jan 2021. For different sex, age, and race groups, there were obvious difference of average COVID-caused death counts. Females tended to had smaller average death counts than males, elder people tended to had higher average mortality than young people. White people got the highest average death counts, while Indian/ Alaska Native had smallest mortality. In conclusion, COVID-19 has obviously changed the mortality trend in the US.
 
 <br>
 

@@ -17,7 +17,8 @@ This website was designed to present my PM566 course's final project. My researc
 ## **Related Resources**
 
 *COVID-19 (Coronavirus Disease 2019):* <https://medlineplus.gov/covid19coronavirusdisease2019.html>
-![](covid.jpeg){width=70%}
+
+![](covid.jpeg){width=80%}
 
 <br>
 
