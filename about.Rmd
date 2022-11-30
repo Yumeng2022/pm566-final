@@ -8,16 +8,43 @@ output:
 
 <br>
 
-#### This Website is about .
+<br>
+
+### **Overview**  
+
+
+#### This website was designed to present my PM566 course's final project. My research focused on the overall death counts in the US and leading causes from 2019 to 2021, then narrowed down to COVID-caused death counts in different age, sex, and race groups, aiming to address COVID-19's impact on mortality trends in the US.
 
 <br>
 
-#### The original dataset was exported from CDC's website: AH Monthly Provisional Counts of Deaths for Select Causes of Death by Sex, Age, and Race and Hispanic Origin (<https://data.cdc.gov/NCHS/AH-Monthly-Provisional-Counts-of-Deaths-for-Select/65mz-jvh5>)
+<br>
+
+### **Related Resources**
+
+
+#### *COVID-19 (Coronavirus Disease 2019):* <https://medlineplus.gov/covid19coronavirusdisease2019.html>
+![](covid.jpeg){width=70%}
 
 <br>
 
-#### My GitHub page: <https://github.com/Yumeng2022>
+#### *Leading Causes of Death - CDC:* <https://www.cdc.gov/nchs/fastats/leading-causes-of-death.htm>
 
 <br>
+
+#### *The Original Dataset:* AH Monthly Provisional Counts of Deaths for Select Causes of Death by Sex, Age, and Race and Hispanic Origin (<https://data.cdc.gov/NCHS/AH-Monthly-Provisional-Counts-of-Deaths-for-Select/65mz-jvh5>)
+
+<br>
+
+#### *My GitHub Page:* <https://github.com/Yumeng2022>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+
 
 
