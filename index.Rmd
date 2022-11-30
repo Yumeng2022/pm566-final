@@ -247,7 +247,7 @@ f1_2= c2 %>%
 ### Tab 1
 
 ```{r echo=FALSE}
-ggplotly(f1_1)
+ggplotly(f1_1) 
 ```
 
 ### Tab 2
@@ -475,7 +475,7 @@ We can find the same pattern in 2020 and 2021. White people got the highest aver
 
 ## **Summary**
 
-This research of mortality comparison by different causes first showed that except for two COVID-19 causes, all other leading causes of death had stable trends from 2019 to 2021. The top 3 leading causes were natural cause, heart disease, and tumor. The COVID-caused mortality started at Feb 2020 and reached it peak at Jan 2021. For different sex, age, and race groups, there were obvious difference of average COVID-caused death counts. Females tended to had smaller average death counts than males, elder people tended to had higher average mortality than young people. White people got the highest average death counts, while Indian/ Alaska Native had smallest mortality. In conclusion, COVID-19 has obviously changed the mortality trend in the US.
+This research of mortality comparison by different causes first showed that except for two COVID-19 causes, all other leading causes of death had stable trends from 2019 to 2021. The top 3 leading causes were natural cause, heart disease, and tumor. The COVID-caused mortality started at Feb 2020 and reached it peak at Jan 2021. For different sex, age, and race groups, there were obvious difference of average COVID-caused death counts. Females tended to had smaller average death counts than males, elder people tended to had higher average mortality than young people. White people got the highest average death counts, while Indian/ Alaska Native had smallest mortality. In conclusion, COVID-19 has obviously affected the mortality trend in the US.
 
 <br>
 
