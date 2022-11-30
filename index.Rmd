@@ -244,13 +244,13 @@ f1_2= c2 %>%
 
 ## {.tabset}
 
-### Tab 1
+### Year
 
 ```{r echo=FALSE}
 ggplotly(f1_1) 
 ```
 
-### Tab 2
+### Total Month
 
 ```{r echo=FALSE}
 ggplotly(f1_2)
@@ -290,13 +290,13 @@ f2_2= subset(c2, Cause %in% "Covid_Multi" | Cause %in% "Covid_Under") %>%
 
 ## {.tabset}
 
-### Tab 1
+### Year
 
 ```{r echo=FALSE}
 ggplotly(f2_1)
 ```
 
-### Tab 2
+### Total Month
 
 ```{r echo=FALSE}
 ggplotly(f2_2)
@@ -348,13 +348,13 @@ f3_2= subset(c_s, Cause %in% "Covid_Under") %>%
 
 ## {.tabset}
 
-### Tab 1
+### Multiple
 
 ```{r echo=FALSE}
 ggplotly(f3_1)
 ```
 
-### Tab 2
+### Underlying
 
 ```{r echo=FALSE}
 ggplotly(f3_2)
@@ -401,13 +401,13 @@ f4_2= subset(c_a, Cause %in% "Covid_Under") %>%
 
 ## {.tabset}
 
-### Tab 1
+### Multiple
 
 ```{r echo=FALSE}
 ggplotly(f4_1)
 ```
 
-### Tab 2
+### Underlying
 
 ```{r echo=FALSE}
 ggplotly(f4_2)
@@ -454,13 +454,13 @@ f5_2= subset(c_r, Cause %in% "Covid_Under") %>%
 
 ## {.tabset}
 
-### Tab 1
+### Multiple
 
 ```{r echo=FALSE}
 ggplotly(f5_1)
 ```
 
-### Tab 2
+### Underlying
 
 ```{r echo=FALSE}
 ggplotly(f5_2)
