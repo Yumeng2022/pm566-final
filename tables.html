@@ -11,7 +11,7 @@
 
 
 
-<title>About This Website</title>
+<title>Tables</title>
 
 <script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -35,6 +35,14 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.26/datatables.js"></script>
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -350,40 +358,41 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">About This Website</h1>
+<h1 class="title toc-ignore">Tables</h1>
 
 </div>
 
 
 <p><br></p>
-<div id="overview" class="section level2">
-<h2><strong>Overview</strong></h2>
-<p>This website was designed to present my PM566 course’s final project.
-My research focused on the overall death counts in the US and leading
-causes from 2019 to 2021, then narrowed down to COVID-caused death
-counts in different age, sex, and race groups, aiming to address
-COVID-19’s impact on mortality trends in the US.</p>
+<div
+id="here-are-the-supplemental-tables-of-this-study.-see-home-page-for-detailed-information."
+class="section level4">
+<h4>Here are the supplemental tables of this study. See Home page for
+detailed information.</h4>
 <p><br></p>
 </div>
-<div id="related-resources" class="section level2">
-<h2><strong>Related Resources</strong></h2>
-<p><em>COVID-19 (Coronavirus Disease 2019):</em> <a
-href="https://medlineplus.gov/covid19coronavirusdisease2019.html"
-class="uri">https://medlineplus.gov/covid19coronavirusdisease2019.html</a></p>
-<p><img src="covid.jpeg" style="width:80.0%" /></p>
+<div id="overall-mortality-trends-by-year" class="section level2">
+<h2>1. Overall Mortality Trends by Year</h2>
+<div id="htmlwidget-d6af74da065746bb1b9d" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d6af74da065746bb1b9d">{"x":{"filter":"none","vertical":false,"caption":"<caption>Table 1. Average Death Counts for Leading Causes by Year<\/caption>","data":[["2019","2020","2021"],[1982.424,2354.156,2277.359],[1807.874,2155.908,2097.527],[26.688,27.863,26.536],[416.381,418.814,404.313],[60.864,71.038,66.947],[84.374,93.251,79.401],[34.569,37.266,26.497],[109.01,106.094,93.015],[30.632,31.373,30.069],[35.809,36.527,35.707],[22.481,23.766,59.575],[457.641,484.861,451.729],[104.167,111.468,107.396],[0,267.54,300.282],[0,244.097,270.305]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>AllCause<\/th>\n      <th>NaturalCause<\/th>\n      <th>Septicemia<\/th>\n      <th>Tumor<\/th>\n      <th>Diabetes<\/th>\n      <th>Alzheimer<\/th>\n      <th>FluPneumonia<\/th>\n      <th>Lower_R<\/th>\n      <th>Other_R<\/th>\n      <th>Nephrosis<\/th>\n      <th>Abnormal<\/th>\n      <th>Heart<\/th>\n      <th>Cerebrovascular<\/th>\n      <th>Covid_Multi<\/th>\n      <th>Covid_Under<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p><br></p>
-<p><em>Leading Causes of Death - CDC:</em> <a
-href="https://www.cdc.gov/nchs/fastats/leading-causes-of-death.htm"
-class="uri">https://www.cdc.gov/nchs/fastats/leading-causes-of-death.htm</a></p>
+</div>
+<div id="covid-caused-death-counts-by-sex" class="section level2">
+<h2>2. COVID-caused Death Counts by Sex</h2>
+<div id="htmlwidget-828edc0d2157ef220d0f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-828edc0d2157ef220d0f">{"x":{"filter":"none","vertical":false,"caption":"<caption>Table 2. Summary of COVID-caused Average Death Counts by Sex<\/caption>","data":[["2019","2019","2020","2020","2021","2021"],["F","M","F","M","F","M"],[1918.015,2046.833,2243.901,2464.411,2137.974,2416.744],[0,0,244.451,290.628,264.163,336.402],[0,0,220.129,268.064,234.037,306.572]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>Sex<\/th>\n      <th>AllCause<\/th>\n      <th>Covid_Multi<\/th>\n      <th>Covid_Under<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p><br></p>
-<p><em>The Original Dataset:</em> AH Monthly Provisional Counts of
-Deaths for Select Causes of Death by Sex, Age, and Race and Hispanic
-Origin (<a
-href="https://data.cdc.gov/NCHS/AH-Monthly-Provisional-Counts-of-Deaths-for-Select/65mz-jvh5"
-class="uri">https://data.cdc.gov/NCHS/AH-Monthly-Provisional-Counts-of-Deaths-for-Select/65mz-jvh5</a>)</p>
+</div>
+<div id="covid-caused-death-counts-by-age" class="section level2">
+<h2>3. COVID-caused Death Counts by Age</h2>
+<div id="htmlwidget-d8cce0636aa308e246fd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d8cce0636aa308e246fd">{"x":{"filter":"none","vertical":false,"caption":"<caption>Table 3. Summary of COVID-caused Average Death Counts by Age<\/caption>","data":[["2019","2019","2019","2019","2019","2019","2019","2019","2019","2019","2020","2020","2020","2020","2020","2020","2020","2020","2020","2020","2021","2021","2021","2021","2021","2021","2021","2021","2021","2021"],["0-4","5-14","15-24","25-34","35-44","45-54","55-64","65-74","75-84","&gt;=85","0-4","5-14","15-24","25-34","35-44","45-54","55-64","65-74","75-84","&gt;=85","0-4","5-14","15-24","25-34","35-44","45-54","55-64","65-74","75-84","&gt;=85"],[170.812,38.174,206.743,410.958,576.292,1113.84,2603.729,3858.049,4777.965,6067.681,161,39.194,250.104,513.076,729.062,1333.215,3069.5,4693.917,5715.493,7037,149.306,38.602,252.417,538.611,805.204,1402.75,3122.278,4747.546,5464.611,6252.269],[0,0,0,0,0,0,0,0,0,0,0.535,0.472,4.264,18.194,47.069,127.188,316.326,571.188,737.528,852.632,1.009,0.898,9.065,39.815,98.843,235.611,489.806,717.713,746.861,663.204],[0,0,0,0,0,0,0,0,0,0,0.375,0.34,3.479,15.708,42.34,118.229,293.431,530.951,675.035,761.076,0.667,0.62,7.713,35.12,91.194,220.88,454.972,660.583,667.222,564.074]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>AgeGroup<\/th>\n      <th>AllCause<\/th>\n      <th>Covid_Multi<\/th>\n      <th>Covid_Under<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p><br></p>
-<p><em>My GitHub Page:</em> <a href="https://github.com/Yumeng2022"
-class="uri">https://github.com/Yumeng2022</a></p>
+</div>
+<div id="covid-caused-death-counts-by-race" class="section level2">
+<h2>4. COVID-caused Death Counts by Race</h2>
+<div id="htmlwidget-b2ca5c1e334e001c1950" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b2ca5c1e334e001c1950">{"x":{"filter":"none","vertical":false,"caption":"<caption>Table 4. Summary of COVID-caused Average Death Counts by Race<\/caption>","data":[["2019","2019","2019","2019","2019","2019","2020","2020","2020","2020","2020","2020","2021","2021","2021","2021","2021","2021"],["Asian","Black","Hispanic","Indian/Alaska","Other","White","Asian","Black","Hispanic","Indian/Alaska","Other","White","Asian","Black","Hispanic","Indian/Alaska","Other","White"],[293.875,1444.408,884.946,75.238,96.946,9099.133,381.629,1875.121,1281.438,103.108,122.262,10361.379,378.578,1761.6,1290.422,100.417,120.272,10012.867],[0,0,0,0,0,0,56.546,256.138,289.312,19.233,14.262,969.746,62.75,253.45,314.928,17.622,15.228,1137.717],[0,0,0,0,0,0,53.075,235.213,273.25,17.779,13.175,872.088,58.544,229.172,296.878,16.15,13.806,1007.278]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>Race<\/th>\n      <th>AllCause<\/th>\n      <th>Covid_Multi<\/th>\n      <th>Covid_Under<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p><br></p>
 <p><br></p>
 <p><br></p>

@@ -1,0 +1,199 @@
+---
+title: "Tables"
+output: 
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+---
+
+<br>
+
+#### Here are the supplemental tables of this study. See Home page for detailed information.
+
+```{r setup, message=FALSE, echo=FALSE, warning=FALSE}
+library(data.table)
+library(dplyr)
+library(dtplyr)
+library(tidyverse)
+library(R.utils)
+library(lubridate)
+library(leaflet)
+library(webshot)
+library(cowplot)
+library(kableExtra)
+library(ggpubr)
+library(gridExtra)
+library(RColorBrewer)
+library(plotly)
+library(DT)
+library(knitr)
+
+# Initialize code chunk options
+opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  eval=TRUE,
+  echo = TRUE,
+  cache = FALSE,
+  fig.width = 7, 
+  fig.align = 'center',
+  fig.asp = 0.618,
+  out.width = "700px")
+```
+
+```{r, include=FALSE}
+#Download dataset from CDC's website and read it in.
+
+if (!file.exists("deaths.csv")) {
+  download.file(
+    url = "https://data.cdc.gov/api/views/65mz-jvh5/rows.csv?accessType=DOWNLOAD", "deaths.csv", method = "libcurl", timeout  = 60)
+}
+ah= data.table::fread("deaths.csv")
+```
+
+```{r, include=FALSE}
+#Change the names of the key variables so that they are easier to refer to in the code.
+
+setnames(ah, old = c('Date Of Death Year', 'Date Of Death Month', 'Race/Ethnicity' ,'Septicemia (A40-A41)', 'Malignant neoplasms (C00-C97)', 'Diabetes mellitus (E10-E14)', 'Alzheimer disease (G30)', 'Influenza and pneumonia (J09-J18)', 'Chronic lower respiratory diseases (J40-J47)', 'Other diseases of respiratory system (J00-J06,J30-J39,J67,J70-J98)', 'Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)','Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)', 'Diseases of heart (I00-I09,I11,I13,I20-I51)' ,'Cerebrovascular diseases (I60-I69)' ,'COVID-19 (U071, Multiple Cause of Death)' ,'COVID-19 (U071, Underlying Cause of Death)'), new = c('Y', 'M', 'Race', 'Septicemia', 'Tumor', 'Diabetes', 'Alzheimer', 'FluPneumonia', 'Lower_R','Other_R' ,'Nephrosis', 'Abnormal', 'Heart', 'Cerebrovascular', 'Covid_Multi' ,'Covid_Under'))
+```
+
+```{r, include=FALSE}
+#Check Categorical Variables
+
+ah$Year= format(ah$Y,format="%y")
+ah$Month= format(ah$M,format="%m")
+is.char= sapply(ah, is.character)
+cate= ah[, ..is.char]
+apply(cate, 2, table)
+```
+
+```{r, include=FALSE}
+#Fix Sex's problem.
+
+ah= tibble::rowid_to_column(ah, "ID")
+
+for (i in 1:length(ah$ID)){
+  if (ah$Sex[i]== 'Female'){
+    ah$Sex[i]= 'F'
+  } else if (ah$Sex[i]== 'Male'){
+    ah$Sex[i]= 'M'}
+}
+
+table(ah$Sex)
+```
+
+```{r, include=FALSE}
+#Rename race categories
+
+for (i in 1:length(ah$ID)){
+  if (ah$Race[i]== 'Non-Hispanic American Indian or Alaska Native'){
+    ah$Race[i]= 'Indian/Alaska'
+  } else if (ah$Race[i]== 'Non-Hispanic Asian'){
+    ah$Race[i]= 'Asian'
+    } else if (ah$Race[i]== 'Non-Hispanic Black'){
+    ah$Race[i]= 'Black'
+    } else if (ah$Race[i]== 'Non-Hispanic White'){
+    ah$Race[i]= 'White'
+}}
+
+table(ah$Race)
+```
+
+```{r, include=FALSE}
+#Reorder age groups
+
+is.factor(ah$AgeGroup)
+
+ah$AgeGroup= as.factor(ah$AgeGroup)
+
+levels(ah$AgeGroup)
+
+levels(ah$AgeGroup)= c('0-4', '15-24', '25-34', '35-44', '45-54', '5-14', '55-64', '65-74', '75-84', '>=85')
+
+ah$AgeGroup= factor(ah$AgeGroup, levels=c('0-4', '5-14', '15-24', '25-34', '35-44', '45-54', '55-64', '65-74', '75-84', '>=85'))
+
+table(ah$AgeGroup)
+```
+
+```{r echo=FALSE}
+#Generate new variable for total months counts
+ah[, Month_total := fifelse(Y== 2019, M,
+                   fifelse(Y== 2020, M+12, M+24))
+    ]
+```
+
+<br>
+
+## 1. Overall Mortality Trends by Year
+```{r echo=FALSE}
+tab1= as.tibble(group_by(ah, Year) %>% 
+                       summarize( AllCause= mean(AllCause), NaturalCause= mean(NaturalCause), Septicemia= mean(Septicemia), Tumor= mean(Tumor), Diabetes= mean(Diabetes), Alzheimer= mean(Alzheimer),FluPneumonia= mean(FluPneumonia), Lower_R= mean(Lower_R), Other_R= mean(Other_R) ,Nephrosis= mean(Nephrosis), Abnormal= mean(Abnormal), Heart= mean(Heart), Cerebrovascular= mean(Cerebrovascular), Covid_Multi= mean(Covid_Multi) , Covid_Under= mean(Covid_Under)))
+
+table1= tab1 %>% mutate(across(where(is.numeric), ~ round(., 3)))
+
+datatable(
+  table1,
+  rownames = F,
+  caption = 'Table 1. Average Death Counts for Leading Causes by Year'
+)
+```
+
+<br>
+
+## 2. COVID-caused Death Counts by Sex
+
+```{r echo=FALSE}
+s= as.tibble(group_by(ah, Year, Sex) %>% 
+                       summarize( AllCause= mean(AllCause), Covid_Multi= mean(Covid_Multi) , Covid_Under= mean(Covid_Under)))
+
+s_t= s %>% mutate(across(where(is.numeric), ~ round(., 3)))
+
+datatable(
+  s_t,
+  rownames = F,
+    caption = 'Table 2. Summary of COVID-caused Average Death Counts by Sex'
+)
+```
+
+<br>
+
+## 3. COVID-caused Death Counts by Age
+
+```{r echo=FALSE}
+a= as.tibble(group_by(ah, Year, AgeGroup) %>% 
+                       summarize( AllCause= mean(AllCause), Covid_Multi= mean(Covid_Multi) , Covid_Under= mean(Covid_Under)))
+
+a_t= a %>% mutate(across(where(is.numeric), ~ round(., 3)))
+
+datatable(
+  a_t,
+  rownames = F,
+    caption = 'Table 3. Summary of COVID-caused Average Death Counts by Age'
+)
+```
+
+<br>
+
+## 4. COVID-caused Death Counts by Race
+
+```{r echo=FALSE}
+r= as.tibble(group_by(ah, Year, Race) %>% 
+                       summarize( AllCause= mean(AllCause), Covid_Multi= mean(Covid_Multi) , Covid_Under= mean(Covid_Under)))
+
+r_t= r %>% mutate(across(where(is.numeric), ~ round(., 3)))
+
+datatable(
+  r_t,
+  rownames = F,
+    caption = 'Table 4. Summary of COVID-caused Average Death Counts by Race'
+)
+```
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
