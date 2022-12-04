@@ -26,7 +26,7 @@ The primary research questions:
 
 The original dataset of this study was exported from AH Monthly Provisional Counts of Deaths for Select Causes of Death by Sex, Age, and Race and Hispanic Origin (https://data.cdc.gov/NCHS/AH-Monthly-Provisional-Counts-of-Deaths-for-Select/65mz-jvh5). 
 
-There were in 3960 observations for death counts, including 14 major causes of death from Jan 2019 to Sep 2021 (33 months in total). After data cleaning, we got 1980 males and 1980 females (1:1) and ten Age categories from “0-4 years” to “85 years and over”. Race were divided into Hispanic, American Indian or Alaska Native, Asian, Black, White, and other. 
+There were 3960 observations for death counts, including 14 major causes of death from Jan 2019 to Sep 2021 (33 months in total). After data cleaning, we got 1980 males and 1980 females (1:1) and ten Age categories from “0-4 years” to “85 years and over”. Race were divided into Hispanic, American Indian or Alaska Native, Asian, Black, White, and other. 
 
 Notably, Year, Total Month, Sex, Age, and Race all have same sample size for each category, so the death counts among groups could also be considered as the proportions, eligible to be compared directly.
 
