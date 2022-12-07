@@ -323,7 +323,7 @@ f3_1= subset(c_s, Cause %in% "Covid_Multi") %>%
                      fill = Sex)) +
   geom_bar(stat='identity', position = "dodge", width= 0.5) +
   ylab("Average Death Counts") +
-  ggtitle("Figure 5. Average Counts of Death for COVID-19 by Sex, as a Multiple Cause") +
+  ggtitle("Figure 5. Average Counts of Death for Multiple COVID-19 Cause by Sex") +
   scale_color_grey() +
   scale_fill_grey() +
   theme_linedraw() +
@@ -337,7 +337,7 @@ f3_2= subset(c_s, Cause %in% "Covid_Under") %>%
                      fill = Sex)) +
   geom_bar(stat='identity', position = "dodge", width= 0.5) +
   ylab("Average Death Counts") +
-  ggtitle("Figure 6. Average Counts of Death for COVID-19 by Sex, as an Underlying Cause") +
+  ggtitle("Figure 6. Average Counts of Death for Underlying COVID-19 Cause by Sex") +
   scale_color_grey() +
   scale_fill_grey() +
   theme_linedraw() +
@@ -375,7 +375,7 @@ f4_1= subset(c_a, Cause %in% "Covid_Multi") %>%
                      fill = AgeGroup)) +
   geom_bar(stat='identity', position = "dodge", width= 0.7) +
   ylab("Average Death Counts") +
-  ggtitle("Figure 7. Average Counts of Death for COVID-19 by Age, as a Multiple Cause") +
+  ggtitle("Figure 7. Average Counts of Death for Multiple COVID-19 Cause by Age") +
   scale_color_brewer(palette="PuOr") +
   scale_fill_brewer(palette="PuOr") +
   theme_linedraw()
@@ -388,7 +388,7 @@ f4_2= subset(c_a, Cause %in% "Covid_Under") %>%
                      fill = AgeGroup)) +
   geom_bar(stat='identity', position = "dodge", width= 0.7) +
   ylab("Average Death Counts") +
-  ggtitle("Figure 8. Average Counts of Death for COVID-19 by Age, as an Underlying Cause") +
+  ggtitle("Figure 8. Average Counts of Death for Underlying COVID-19 Cause by Age") +
   scale_color_brewer(palette="PuOr") +
   scale_fill_brewer(palette="PuOr") +
   theme_linedraw()
@@ -425,7 +425,7 @@ f5_1= subset(c_r, Cause %in% "Covid_Multi") %>%
                      fill = Race)) +
   geom_bar(stat='identity', position = "dodge", width= 0.5) +
   ylab("Average Death Counts") +
-  ggtitle("Figure 9. Average Counts of Death for COVID-19 by Race, as a Multiple Cause") +
+  ggtitle("Figure 9. Average Counts of Death for Multiple COVID-19 Cause by Race") +
   scale_color_brewer(palette="Set2") +
   scale_fill_brewer(palette="Set2") +
   theme_linedraw()
@@ -438,7 +438,7 @@ f5_2= subset(c_r, Cause %in% "Covid_Under") %>%
                      fill = Race)) +
   geom_bar(stat='identity', position = "dodge", width= 0.5) +
   ylab("Average Death Counts") +
-  ggtitle("Figure 10. Average Counts of Death for COVID-19 by Race, as an Underlying Cause") +
+  ggtitle("Figure 10. Average Counts of Death for Underlying COVID-19 Cause by Race") +
   scale_color_brewer(palette="Set2") +
   scale_fill_brewer(palette="Set2") +
   theme_linedraw()

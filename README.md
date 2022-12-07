@@ -6,4 +6,4 @@ To acquire the dataset, click the "data" folder above.
 
 See my webpage: https://yumeng2022.github.io/pm566-final/
 
-For more details, the written report (PDF version) can be downloaded from the website.
+For more details, the written report (PDF version) can be downloaded from the "Report" folder above and the website.
