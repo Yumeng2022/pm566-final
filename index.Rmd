@@ -9,6 +9,10 @@ output:
 
 <br>
 
+#### *Link to my written report: [Report](https://github.com/Yumeng2022/pm566-final/blob/main/Report/Report.pdf)       [[Download]](https://github.com/Yumeng2022/pm566-final/raw/main/Report/Report.pdf)*
+
+<br>
+
 ## **Research Questions**
 
 COVID-19 has gradually became one of the leading causes of death in the US since its outbreak in 2020. It is pivotal to draw a picture of COVID-19-attributed mortality with other leading causes of death, to quantify the influence of this pandemic. 

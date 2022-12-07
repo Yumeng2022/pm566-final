@@ -129,7 +129,7 @@ ah[, Month_total := fifelse(Y== 2019, M,
 tab1= as.tibble(group_by(ah, Year) %>% 
                        summarize( AllCause= mean(AllCause), NaturalCause= mean(NaturalCause), Septicemia= mean(Septicemia), Tumor= mean(Tumor), Diabetes= mean(Diabetes), Alzheimer= mean(Alzheimer),FluPneumonia= mean(FluPneumonia), Lower_R= mean(Lower_R), Other_R= mean(Other_R) ,Nephrosis= mean(Nephrosis), Abnormal= mean(Abnormal), Heart= mean(Heart), Cerebrovascular= mean(Cerebrovascular), Covid_Multi= mean(Covid_Multi) , Covid_Under= mean(Covid_Under)))
 
-table1= tab1 %>% mutate(across(where(is.numeric), ~ round(., 3)))
+table1= tab1 %>% mutate(across(where(is.numeric), ~ round(., 2)))
 
 datatable(
   table1,
@@ -146,7 +146,7 @@ datatable(
 s= as.tibble(group_by(ah, Year, Sex) %>% 
                        summarize( AllCause= mean(AllCause), Covid_Multi= mean(Covid_Multi) , Covid_Under= mean(Covid_Under)))
 
-s_t= s %>% mutate(across(where(is.numeric), ~ round(., 3)))
+s_t= s %>% mutate(across(where(is.numeric), ~ round(., 2)))
 
 datatable(
   s_t,
@@ -163,7 +163,7 @@ datatable(
 a= as.tibble(group_by(ah, Year, AgeGroup) %>% 
                        summarize( AllCause= mean(AllCause), Covid_Multi= mean(Covid_Multi) , Covid_Under= mean(Covid_Under)))
 
-a_t= a %>% mutate(across(where(is.numeric), ~ round(., 3)))
+a_t= a %>% mutate(across(where(is.numeric), ~ round(., 2)))
 
 datatable(
   a_t,
@@ -180,7 +180,7 @@ datatable(
 r= as.tibble(group_by(ah, Year, Race) %>% 
                        summarize( AllCause= mean(AllCause), Covid_Multi= mean(Covid_Multi) , Covid_Under= mean(Covid_Under)))
 
-r_t= r %>% mutate(across(where(is.numeric), ~ round(., 3)))
+r_t= r %>% mutate(across(where(is.numeric), ~ round(., 2)))
 
 datatable(
   r_t,

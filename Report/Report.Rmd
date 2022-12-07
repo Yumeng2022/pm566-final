@@ -12,13 +12,13 @@ header-includes:
 
 \captionsetup[table]{labelformat=empty}
 
-# Introduction
+# **Introduction**
 
 COVID-19 has gradually became one of the leading causes of death in the US since its outbreak in 2020. According to US Center for Disease Control and Prevention (CDC), the top 10 leading causes of death now are: heart disease, cancer, COVID-19, accidents (unintentional injuries), stroke (cerebrovascular diseases), chronic lower respiratory diseases, Alzheimer's disease, diabetes, influenza and pneumonia, as well as nephritis, nephrotic syndrome, and nephrosis. Moreover, COVID-19 may interact with other diseases to impair the health conditions of its hosts, eventually leading to death. Thus, it is pivotal to draw a picture of COVID-19-attributed mortality with other leading causes of death, to quantify the influence of this pandemic. This study focused on the overall death counts in the US and leading causes, then narrowed down to COVID-caused death counts in different age, sex, and race groups. The primary research questions are has the pandemic affected the mortality trends in the US and how is COVID-caused mortality related to sex, age, and race?
 
 
 
-# Methods
+# **Methods**
 
 The original dataset of this study was exported from CDC's website: AH Monthly Provisional Counts of Deaths for Select Causes of Death by Sex, Age, and Race and Hispanic Origin (<https://data.cdc.gov/NCHS/AH-Monthly-Provisional-Counts-of-Deaths-for-Select/65mz-jvh5>) as a csv format. 
 
@@ -62,7 +62,7 @@ Then for the analysis narrowing down to COVID-19 multiple and underlying causes,
 
 
 
-# Results
+# **Results**
 
 ```{r setup, message=FALSE, echo=FALSE, warning=FALSE}
 library(data.table)
@@ -441,7 +441,7 @@ We can find the same pattern in 2020 and 2021. White people got the highest aver
 
 
 
-# Conclusion and Summary
+# **Conclusion and Summary**
 
 This research of mortality comparison by different causes first showed that except for two COVID-19 causes, all other leading causes of death had stable trends from 2019 to 2021. The top 3 leading causes were natural cause, heart disease, and tumor. The COVID-caused mortality started at Feb 2020 and reached it peak at Jan 2021. For different sex, age, and race groups, there were obvious difference of average COVID-caused death counts. Females tended to had smaller average death counts than males, elder people tended to had higher average mortality than young people. White people got the highest average death counts, while Indian/Alaska Native had smallest mortality. In conclusion, COVID-19 has obviously affected the mortality trend in the US.
 
