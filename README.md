@@ -5,3 +5,5 @@ My research explored the overall death counts in the US and leading causes from 
 To acquire the dataset, click the "data" folder above.
 
 See my webpage: https://yumeng2022.github.io/pm566-final/
+
+For more details, the written report (PDF version) can be downloaded from the website.
